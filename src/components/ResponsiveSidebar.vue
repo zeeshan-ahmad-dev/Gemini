@@ -1,7 +1,7 @@
 <template>
 	<aside
 		:class="[
-			['flex-col justify-between z-40 w-[80vw] rounded-r-2xl absolute  h-[100vh] bg-[#F0F4F9] flex lg:hidden px-4 py-5 transition-all'],
+			['flex-col justify-between z-40 w-[80dvw] rounded-r-2xl absolute  h-[100dvh] bg-[#F0F4F9] flex lg:hidden px-4 py-5 transition-all'],
 			[sidebarIsOpen ? '-translate-x-full' : 'w-fit'],
 		]"
 	>

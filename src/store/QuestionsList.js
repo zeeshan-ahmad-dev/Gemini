@@ -5,7 +5,7 @@ export const useQuestions = defineStore('questionlist', {
         questions: [],
         currentIndex: 0,
         isGreeting: true,
-        sidebarIsOpen: false
+        sidebarIsOpen: true
     }),
     getters: {
         getQuestions() {
