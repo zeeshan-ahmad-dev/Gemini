@@ -4,7 +4,8 @@ export const useQuestions = defineStore('questionlist', {
     state: () => ({
         questions: [],
         currentIndex: 0,
-        isGreeting: true
+        isGreeting: true,
+        sidebarIsOpen: false
     }),
     getters: {
         getQuestions() {
@@ -18,6 +19,9 @@ export const useQuestions = defineStore('questionlist', {
         },
         showIsGreeting() {
             return this.isGreeting
+        },
+        showSidebarIsOpen() {
+            return this.sidebarIsOpen
         }
     },
     actions: {

@@ -1,8 +1,9 @@
 <template>
 	<section class="w-full">
 		<Navbar />
-		<section class="px-20">
-			<div v-if="!isGreeting" class="space-y-10 h-[70vh]">
+		<div :class="[['h-[94vh] md:[98vh] overflow-hidden w-[100vw] absolute z-30'],[!questionsStore.sidebarIsOpen ? 'bg-gray-400 lg:hidden' : 'hidden']]"></div>
+		<section class="flex flex-col justify-between px-4 md:px-6 lg:px-20 h-[90dvh] py-7 sm:h-[90vh] md:h-[94vh] lg:h-[90vh] xl:h-[87vh]">
+			<div v-if="!isGreeting" class="space-y-10">
 				<div class="flex items-center self-start gap-5">
 					<img class="w-10 rounded-full" :src="assets.user_icon" alt="" /><span>{{
 						activeQuestion.question
@@ -32,14 +33,14 @@
 					<span v-else v-html="activeQuestion.answer" class="self-start leading-7"></span>
 				</div>
 			</div>
-			<div v-else class="grid place-content-center h-[70vh]">
+			<div v-else class="grid h-[80%] place-content-center">
 				<h1
 					class="inline-block text-transparent bg-gradient-to-r from-[#6192F1] via-[#ac6eb2] to-[#d96570] bg-clip-text text-3xl font-semibold"
 				>
 					Hello, Zeeshan
 				</h1>
 			</div>
-			<div class="flex relative justify-between items-center p-5 bg-[#F0F4F9] rounded-full">
+			<div class="flex relative justify-between bottom-0 items-center p-5 bg-[#F0F4F9] rounded-full">
 				<input
 					v-model="inputVal"
 					@keydown.enter="onSent(inputVal)"
@@ -48,12 +49,12 @@
 					type="text"
 				/>
 				<div class="flex items-center">
-					<img class="w-6 mr-4" :src="assets.gallery_icon" alt="" />
-					<img class="w-6 mr-4" :src="assets.mic_icon" alt="" />
+					<img class="w-5 mr-4 lg:w-6" :src="assets.gallery_icon" alt="" />
+					<img class="w-5 mr-4 lg:w-6" :src="assets.mic_icon" alt="" />
 					<img
 						@click="onSent(inputVal)"
 						v-if="inputVal.length > 0"
-						class="w-6 mr-4"
+						class="w-5 mr-8 lg:w-6 lg:mr-4"
 						:src="assets.send_icon"
 						alt=""
 					/>
