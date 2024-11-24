@@ -1,7 +1,7 @@
 <template>
 	<section class="w-full">
 		<Navbar />
-		<div :class="[['h-[94vh] md:[98vh] overflow-hidden w-[100vw] absolute z-30'],[!questionsStore.sidebarIsOpen ? 'bg-gray-400 lg:hidden' : 'hidden']]"></div>
+		<div :class="[['h-[94dvh] md:[98dvh] overflow-hidden w-[100dvw] absolute z-30'],[!questionsStore.sidebarIsOpen ? 'bg-gray-400 lg:hidden' : 'hidden']]"></div>
 		<section class="flex flex-col justify-between px-4 md:px-6 lg:px-20 h-[90dvh] py-7 sm:h-[90vh] md:h-[94vh] lg:h-[90vh] xl:h-[87vh]">
 			<div v-if="!isGreeting" class="space-y-10">
 				<div class="flex items-center self-start gap-5">
